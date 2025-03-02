@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Welcome to Ona</h1>
+    <p>Connect with people of the opposite gender via video chat!</p>
+    {% if not current_user.is_authenticated %}
+        <a href="{{ url_for('register') }}" class="btn">Get Started</a>
+    {% endif %}
+{% endblock %}

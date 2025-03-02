@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Video Chat</h2>
+    <div id="video-container">
+        <video id="localVideo" autoplay playsinline muted></video>
+        <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+    <button id="startChat">Start Chat</button>
+    <div id="gifts">
+        <button onclick="sendGift(1)">Heart ($1)</button>
+        <button onclick="sendGift(2)">Flower ($2)</button>
+    </div>
+    <p id="chatStatus"></p>
+{% endblock %}
