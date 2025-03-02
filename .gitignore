@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 venv/
 *.db
+static/images/profiles/*
+!static/images/profiles/default.png

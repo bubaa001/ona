@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f8fa;
@@ -14,9 +14,23 @@ body {
     width: 250px;
     background-color: #fff;
     border-right: 1px solid #e1e8ed;
-    padding: 20px;
+    padding: 20px 10px;
     position: fixed;
     height: 100%;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .logo {
@@ -24,17 +38,32 @@ body {
     height: 50px;
 }
 
+h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #1da1f2;
+}
+
 nav a {
-    display: block;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
     color: #1da1f2;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 25px;
+    margin: 5px 0;
+}
+
+nav a i {
+    margin-right: 15px;
+    font-size: 20px;
 }
 
 nav a:hover {
     background-color: #e8f5fe;
-    border-radius: 20px;
+    color: #1da1f2;
 }
 
 .main-content {
@@ -48,7 +77,20 @@ nav a:hover {
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1991db;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 #video-container {
@@ -60,4 +102,52 @@ video {
     width: 300px;
     height: 200px;
     background-color: black;
+    border-radius: 10px;
+}
+
+#payment-form {
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+#card-element {
+    border: 1px solid #e1e8ed;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#card-errors {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+    }
+    .main-content {
+        margin-left: 100px;
+    }
+    nav a span {
+        display: none;
+    }
+    nav a i {
+        margin-right: 0;
+    }
+    .profile-picture {
+        width: 40px;
+        height: 40px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+    video {
+        width: 200px;
+        height: 150px;
+    }
 }
